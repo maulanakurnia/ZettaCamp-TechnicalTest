@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML&CSS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="banner">
+        <h1>Simple Pricing!</h1>
+        <div class="descr">
+            <p>The most advanced customer support tools with a simple and affordable pricing. And you can always try for
+                30 days. free!</p>
+        </div>
+    </div>
+
+    <div class="pricing">
+        <div id="card0" class="card" onClick="onClickCard(event)">
+            <div class="card-header">
+                <h2>basic</h2>
+            </div>
+
+            <div class="card-body">
+                <div class="price">
+                    <span><sup>$</sup> 4 <sub>/ month</sub></span>
+                </div>
+                <div class="descr">
+                    <p><b>10</b> Projects</p>
+                    <p><b>10</b> Pages</p>
+                    <p><b>100</b> Mb Disk Space</p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button id="btnBuy0" class="btn-primary" onclick="onClickBuy()">BUY NOW</button>
+            </div>
+        </div>
+
+        <div id="card1" class="card" onClick="onClickCard(event)">
+            <div class="card-header">
+                <div class="flex">
+                    <h2>standard</h2>
+                    <p>Save 15%</p>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+                <div class="price">
+                    <span><sup>$</sup> 8 <sub>/ month</sub></span>
+                </div>
+
+                <div class="descr">
+                    <p><b>20</b> Projects</p>
+                    <p><b>20</b> Pages</p>
+                    <p><b>200</b> Mb Disk Space</p>
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+                <button id="btnBuy1" class="btn-primary" onclick="onClickBuy()">BUY NOW</button>
+            </div>
+        </div>
+
+        <div id="card2" class="card" onClick="onClickCard(event)">
+            <div class="card-header">
+                <h2>advanced</h2>
+            </div>
+
+            <div class="card-body">
+                <div class="price">
+                    <span><sup>$</sup> 12 <sub>/ month</sub></span>
+                </div>
+                <div class="descr">
+                    <p><b>40</b> Projects</p>
+                    <p><b>40</b> Pages</p>
+                    <p><b>500</b> Mb Disk Space</p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button id="btnBuy2" class="btn-primary" onclick="onClickBuy()">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="heading-faq">
+            <h2>Frequenly Asked Question</h2>
+        </div>
+        <div class="flex-container">
+            <div class="card-faq">
+                <h2>How does free trial work?</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a diam nec augue tincidunt
+                    accumsan. In dignissim laoreet ipsum eu iterdum.
+                </p>
+            </div>
+
+            <div class="card-faq">
+                <h2>Can I cancel any time?</h2>
+                <p>
+                    Aliquam erat volutpat. Etiam luctus messa ex, at tempus tellus blandit quis. Sed quis neque tellus.
+                    Donec maximus ipsum in malesuada hendrerit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function onClickBuy() {
+            alert("Success");
+        }
+
+        function onClickCard(e) {
+            e = e || window.event;
+            var target = e.target || e.srcElement;
+            var str = target.parentNode.id.slice(0, -1)
+
+            if(target.matches("div.card-body")) {
+                if(target.matches("div.card-body.selected")) {
+                    target.classList.remove("selected")
+                    target.parentNode.style.backgroundColor = "#F8ECD1"
+                } else {
+                    target.classList.add("selected")
+                    target.parentNode.style.backgroundColor = "#FFF"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

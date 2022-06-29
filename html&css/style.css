@@ -1,0 +1,223 @@
+/* ----------------------------------------------
+                TABLE OF CONTENT
+
+    00 - GLOBAL
+    01 - BANNER
+    02 - CARD PRICING
+    03 - FAQ
+
+    press ctrl + f for search content styles!
+---------------------------------------------- */
+
+
+/* ----------------------------------------------
+                00 - GLOBAL 
+----------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #444;
+    font-size: 13px;
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: auto;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.btn-primary {
+    background-color: #019be5;
+}
+
+.flex-container {
+    display: flex;
+    width: 650px;
+    justify-content: center;
+    margin: 0 auto;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+/*----------------------------------------------
+                01 - BANNER 
+----------------------------------------------*/
+.banner {
+    width: 100%;
+    height: 480px;
+    background-color: #1E2C4F;
+    text-align:center;
+    padding: 50px;
+}
+
+.banner h1 {
+    font-weight: 400 !important;
+    font-size: 40px;
+    color: #fff;
+}
+
+.banner .descr {
+    font-weight: 200 !important;
+    color: white;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.banner .descr p {
+    width: 500px !important;
+}
+
+/*----------------------------------------------
+                02 - CARD PRICING 
+----------------------------------------------*/
+.pricing {
+    width: 990px;
+    padding: 21px;
+    margin: auto;
+    margin-top: -200px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+    box-shadow: 0 10px 18px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-header {
+    background: #3c4252;
+    color: #fff;
+    padding: 15px;
+    flex: 1;
+}
+
+.card-header h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300!important;
+}
+
+.card-header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    padding: 30px;
+    flex: 1 100%;
+    cursor: pointer;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: 30px;
+}
+
+.card-body .price {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d0d0d0;
+    cursor: default;
+}
+
+.card-body span {
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.card-body sup {
+    font-size: 20px;
+    color: #d0d0d0;
+}
+
+.card-body sub {
+    font-size: 20px;
+    font-weight: 500;
+    color: #d0d0d0;
+}
+
+.card-body .descr {
+    padding-top: 30px;
+    cursor: default;
+}
+
+/*----------------------------------------------
+                    03 - FAQ 
+----------------------------------------------*/
+.faq {
+    margin: 60px;
+}
+
+.faq .heading-faq {
+    color: #616161;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+}
+
+.faq .heading-faq h2 {
+    font-weight: 300!important;
+    padding: 30px 0;
+}
+
+.card-faq {
+    margin-top: 30px;
+}
+
+.card-faq h2 {
+    font-size: 16px;
+    font-weight: 500!important;
+}
+
+.card-faq p {
+    color: #616161;
+}
+
